@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home" android:title="Home" android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/men" android:title="Men" android:icon="@drawable/ic_boy"/>
+    <item android:id="@+id/women" android:title="Women" android:icon="@drawable/ic_girl"/>
+    <item android:id="@+id/kids" android:title="Kids" android:icon="@drawable/ic_child"/>
+</menu>

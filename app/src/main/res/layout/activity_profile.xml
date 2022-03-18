@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Profile"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBarProfile"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/corner"
+                app:strokeColor="@color/darker_grey"
+                app:strokeWidth="1dp" />
+
+            <ImageButton
+                android:id="@+id/imgBtnCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/ripple_button"
+                android:backgroundTint="@color/grey_white"
+                android:padding="10dp"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
+                app:layout_constraintEnd_toEndOf="@+id/imgProfile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtNameProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginVertical="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Your Name..."
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edtNameProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:drawableStart="@drawable/ic_person_toggle"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@drawable/edit_text_shape"
+                android:layout_weight="3"
+                android:inputType="text"
+                android:enabled="false"
+                android:layout_marginEnd="10dp" />
+            <ImageButton
+                android:id="@+id/imgBtnEditName"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_button"
+                android:src="@drawable/ic_edit" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edtPhoneProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Phone"
+                android:drawableStart="@drawable/ic_phone_toggle"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@drawable/edit_text_shape"
+                android:layout_weight="3"
+                android:inputType="phone"
+                android:enabled="false"
+                android:layout_marginEnd="10dp" />
+            <ImageButton
+                android:id="@+id/imgBtnEditPhone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_button"
+                android:src="@drawable/ic_edit" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Save"
+            android:background="@drawable/button_shape"
+            android:textAllCaps="true"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>
